@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tax Calculator</h1>
+      <label for="income">Gross Annual Income:</label>
+      <div class="in1">
+        <input
+          onchange="checkInteger()"
+          type=""
+          id="income"
+          placeholder="Enter your income"
+        />
+        <div class="error-msg" id="err1">Please enter a valid input</div>
+      </div>
+      <br />
+      <label for="extraIncome">Extra Income:</label>
+      <div class="int2">
+        <input onchange="checkInteger()" type="" id="extraIncome" placeholder="Enter extra income" />
+        <div class="error-msg" id="err2">Please enter a valid input</div>
+      </div>
+      <br />
+      <label for="deductions">Deductions:</label>
+      <div class="in3">
+        <input type="" onchange="checkInteger()" id="deductions" placeholder="Enter your deductions" />
+        <div class="error-msg" id="err3">Please enter a valid input</div>
+      </div>
+      <br />
+      <label for="age">Age:</label>
+      <select id="age">
+        <option value="<40">&lt; 40</option>
+        <option value="40-60">≥ 40 &lt; 60</option>
+        <option value="≥60">≥ 60</option>
+      </select>
+      <br />
+      <button onclick="allFillOrNot()">Calculate Tax</button>
+      <br />
+      <div id="errorIcons">
+        <img src="" alt="Error icon" class="error-icon" />
+        <img src="error icone.jpeg" alt="Error icon" class="error-icon" />
+        <img src="error icone.jpeg" alt="Error icon" class="error-icon" />
+        <img src="error icone.jpeg" alt="Error icon" class="error-icon" />
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="result"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

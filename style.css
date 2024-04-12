@@ -1,0 +1,151 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type=""],
+select {
+  width: calc(100% - 30px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.error-icon {
+  display: none;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* .error-msg {
+  font-size: small; 
+  text-decoration: underline;
+  color: red;
+  cursor: pointer;
+  display: none;
+} */
+#err1 {
+  font-size: small;
+  text-decoration: underline;
+  color: red;
+  cursor: pointer;
+  display: none;
+}
+#err2 {
+    font-size: small;
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+    display: none;
+  }
+  #err3 {
+    font-size: small;
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+    display: none;
+  }
+.error-msg {
+  position: relative; /* Required for positioning the tooltip */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.error-msg::after {
+  content: "Please Enter a Numeric Value"; /* Text for the tooltip */
+  position: absolute; /* Position the tooltip relative to the parent */
+  top: 100%; /* Position below the parent element */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: #333; /* Background color of the tooltip */
+  color: #fff; /* Text color of the tooltip */
+  padding: 5px 10px; /* Padding inside the tooltip */
+  border-radius: 4px; /* Rounded corners */
+  opacity: 0; /* Initially hide the tooltip */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+}
+
+.error-msg:hover::after {
+  opacity: 1; /* Show the tooltip on hover */
+}
